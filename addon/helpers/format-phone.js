@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper as buildHelper } from '@ember/component/helper';
 
 export function formatPhone(params/*, hash*/) {
   var phone = params[0];
@@ -15,4 +15,4 @@ export function formatPhone(params/*, hash*/) {
   return String(phone).replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
 }
 
-export default Ember.Helper.helper(formatPhone);
+export default buildHelper(formatPhone);
